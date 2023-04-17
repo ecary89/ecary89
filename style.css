@@ -20,7 +20,7 @@
     --h3: 24px;
     --body-font: 20px;
 
-    --mobile-h1: 40px;
+    --mobile-h1: 35px;
     --mobile-h2: 32px;
     --mobile-h3: 20px;
     --mobile-body-font: 18px;
@@ -293,10 +293,6 @@ footer {
         margin-top: 3rem;
         max-width: 75%;
     }
-    
-    header h1, .more-work-container h1 {
-        font-size: var(--mobile-h1);
-    }
 
     .text-container {
         flex: 1 1 50%;
@@ -324,6 +320,10 @@ footer {
         width: 100%;
         height: auto;
     }
+
+    h1 {
+        font-size: var(--h2);
+    }
 }
 
 @media (max-width: 1000px) {
@@ -341,7 +341,6 @@ footer {
     body {
         font-size: var(--mobile-body-font);
     }
-    
 
     header {
         background-image: url(images/mobile_header_asset.svg);
@@ -350,10 +349,6 @@ footer {
         padding-top: 8.5rem;
         background-color: transparent;
         border-bottom-right-radius: var(--bottom-right-radius);
-    }
-
-    header h1 {
-        font-size: 35px;
     }
 
     .header_summary {
@@ -391,9 +386,8 @@ footer {
         font-size: 16px;
     }
 
-@media (max-width: 450px) {
-    .header_summary h3 {
-        font-size: var(--mobile-h3);
+    h1 {
+        font-size: var(--mobile-h1);
     }
 
     h2 {
@@ -403,7 +397,12 @@ footer {
     h3 {
         font-size: var(--mobile-h3);
     }
-    
+
+@media (max-width: 450px) {
+    .header_summary h3 {
+        font-size: var(--mobile-h3);
+    }
+
     footer p {
         font-size: 14px;
     }
