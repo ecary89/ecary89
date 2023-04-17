@@ -22,6 +22,10 @@
     */
 }
 
+.bold {
+    font-weight: var(--bold-font-weight);
+}
+
 body {
     font-family: 'Open-sans', sans-serif;
     background-color: var(--background-color-);
@@ -244,18 +248,20 @@ footer {
     text-decoration: none;
     padding: 10px 0;
 }
-  
+
 .navbar-item a::before {
+    /* yellow link underline style START */
     content: "";
     position: absolute;
-    bottom: -2px;
+    bottom: 0px;
     left: 0;
     right: 0;
     height: 2px;
     background-color: var(--accent-color);
+    /* yellow link underline style END */
     visibility: hidden;
     transform: scaleX(0);
-    transition: all 0.3s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
 }
   
 .navbar-item a:hover::before {
@@ -287,6 +293,14 @@ footer {
     .more-work-container {
         background-image: url(images/mobile_more_work_asset.svg);
         box-shadow: var(--card-box-shadow);
+    }
+
+    .more-work-image-container {
+        max-width: 70%;
+    }
+
+    .more-work-image-container img {
+        border-radius: 4vw;
     }
 
     footer p {
