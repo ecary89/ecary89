@@ -271,6 +271,16 @@ footer {
     background-color: var(--secondary-color) !important; 
 }
 
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+    
+
 @media (min-width: 1800px) {
     header {
         padding: 10rem 25rem; 

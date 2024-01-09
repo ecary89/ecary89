@@ -16,29 +16,31 @@
         </ul>
     </nav>
     <header>
-        <h1>Hi, my name is <br>
-        <span class="bold">Erika Cary</span>. I'm a <br>
-        <span class="bold">Product Designer</span>.
-        </h1>
-        <div class="header_summary">
-            <h3>with a few notable qualities...</h3>
-            <ul>
-                <li>I design user-friendly interactions that work in the real world.</li>
-                <li>I design new apps and sites from scratch - primarily e-commerce and social.</li>
-                <li>I design for machine learning driven products.</li>
-                <li>I strategize and lead teams to create cohesive and fluid experiences.</li>
-            </ul>
-        </div>
-        <div style="clear: both;"></div> <!-- Add a clearing element -->
+            <div class="header_title fade-in">
+                <h1>Hi, my name is <br>
+                <span class="bold">Erika Cary</span>. I'm a <br>
+                <span class="bold">Product Designer</span>.
+                </h1>
+            </div>
+            <div class="header_summary fade-in">
+                <h3>with a few notable qualities...</h3>
+                <ul>
+                    <li>I design user-friendly interactions that work in the real world.</li>
+                    <li>I design new apps and sites from scratch - primarily e-commerce and social.</li>
+                    <li>I design for machine learning driven products.</li>
+                    <li>I strategize and lead teams to create cohesive and fluid experiences.</li>
+                </ul>
+            </div>
+            <div style="clear: both;"></div> <!-- Add a clearing element -->
     </header>
   
   <main>
     <section>
         <div class="project-container proj-img-left" style="background-color: #FFE2EC; color: #AD1040;">
-            <div class="image-container">
+            <div class="image-container fade-in">
               <img src="images/pinterest.jpg" alt="Pinterest Collage">
             </div>
-            <div class="text-container">
+            <div class="text-container fade-in" data-duration="2">
                 <h2>Pinterest</h2>
                 <p>Shopping at Pinterest.</p>
                 <h3>2022 - Present | Lead Product Designer</h3>
@@ -52,7 +54,7 @@
     
     <section>
         <div class="project-container proj-img-right" style="background-color: #FAFAFA; color: #0008FB;">
-            <div class="text-container">
+            <div class="text-container fade-in">
                 <h2>THE YES</h2>
                 <p>AI powered shopping. Acquired by Pinterest. <br>A store as unique as you - your style, your brands, your sizes.</p>
                 <h3>2018 - 2022 | Lead Product Designer</h3>
@@ -62,7 +64,7 @@
                     <li>I wore many hats:  research, PM, data analysis, copywriter, established process, and launched code!</li>
                 </ul>
             </div>
-                <div class="image-container" style="align-items: flex-start">  
+                <div class="image-container fade-in" style="align-items: flex-start">  
                     <img src="images/the_yes.jpg" alt="The Yes Website">
                 </div>
             </div>
@@ -70,10 +72,10 @@
     
     <section>
         <div class="project-container proj-img-left" style="background-color: #FFFEEA; color: #8728FF;">
-            <div class="image-container">
+            <div class="image-container fade-in">
               <img src="images/yahoo.jpg" alt="Yahoo Home App">
             </div>
-            <div class="text-container">
+            <div class="text-container fade-in">
                 <h2>Yahoo Home App</h2>
                 <p>All your Yahoo content in one place.</p>
                 <h3>2018 | Lead Product Designer</h3>
@@ -87,7 +89,7 @@
 
     <section>
         <div class="project-container proj-img-right" style="background-color: #DBFFF8; color: #006204;">
-            <div class="text-container">
+            <div class="text-container fade-in">
                 <h2>Polyvore Labs</h2>
                 <p>Polyvore - a social fashion collaging app - was acquired by Yahoo in 2015. Polyvore Labs focused on finding product market fit across a variety of verticals. </p>
                     <h3>2017 - 2018 | Product Designer</h3>
@@ -97,15 +99,15 @@
                     <li>Built a foundation in social mechanics, and established a fast iterative launch process.</li>
                 </ul>
             </div>
-            <div class="image-container">
+            <div class="image-container fade-in">
               <img src="images/polyvore_labs.jpg" alt="Polyvore Labs Projects">
             </div>
           </div>
     </section>
 
     <section class="more-work-container">
-        <h1 class="bold"> More Work </h1>
-            <div class="more-work-image-container">
+        <h1 class="bold  fade-in"> More Work </h1>
+            <div class="more-work-image-container fade-in" data-duration="2">
                 <img src="images/polyvore.jpg" alt="Polyvore Logo">
                 <img src="images/zagat.jpg" alt="Zagat Logo">
                 <img src="images/disney.jpg" alt="Disney Logo">
@@ -117,46 +119,8 @@
   
 </main>
 
-
+<script src="load-in-animations.js"></script> 
 <script src="sticky-navbar.js"></script> 
-  
-<!-- Code injected by live-server -->
-<script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-</script>
+
 </body>
 </html>
