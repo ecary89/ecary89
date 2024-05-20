@@ -31,14 +31,23 @@
 
 body {
     font-family: 'Open-sans', sans-serif;
-    background-image: url("images/header_asset.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     margin: 0;
     font-size: var(--body-font);
     font-weight: var(--regular-font-weight);
     padding: 0 10rem;
+}
+
+body::before {
+    content: ""; /* Create a pseudo-element for background image */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/header_asset.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 h1, h2, span, body {
@@ -50,7 +59,7 @@ h1 {
     font-size: var(--h1);
     font-weight: var(--semi-bold-font-weight);
     letter-spacing: -0.075rem;
-    color: var(--primary-color)
+    color: var(--primary-color);
 }
 
 p {
@@ -83,7 +92,7 @@ footer {
 }
 
 .icon_row_item {
-    margin-right: 1rem;
+    margin-right: 1.25rem;
 }
 
 .icon-style {
@@ -93,11 +102,22 @@ footer {
 
 .fade-in {
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    transform: translateY(5%);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .fade-in.visible {
     opacity: 1;
+    transform: translateY(0);
+}
+
+.logo-fade-in {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.logo-fade-in.visible {
+    opacity: 1;;
 }
 
 .logo-container {
@@ -126,8 +146,11 @@ footer {
 @media (max-width: 699px) {
     body {
         font-size: var(--mobile-body-font);
-        background-image: url("images/mobile_header_asset.svg");
         padding: 0 2rem;
+    }
+
+    body::before {
+        background-image: url("images/mobile_header_asset.svg");
     }
 
     h1 {
