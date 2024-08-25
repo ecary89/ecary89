@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Apply fade-in effect in the specified order
     elements.forEach(function(element, index) {
-        var delay = initialDelay + index * 0.3; // Adjust the delay as needed (0.5 seconds between each element)
+        var delay = initialDelay + index * 0.4; // Adjust the delay as needed (0.5 seconds between each element)
         element.style.transitionDelay = `${delay}s`;
         setTimeout(() => {
             element.classList.add('visible');
