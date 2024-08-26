@@ -15,8 +15,8 @@
     --body-font: 24px;
     --tiny-font: 16px;
 
-    --mobile-h1: 60px;
-    --mobile-body-font: 18px;
+    --mobile-h1: 40px;
+    --mobile-body-font: 16px;
 
     --bottom-margin: 2rem;
 
@@ -43,18 +43,6 @@ body {
     font-weight: var(--regular-font-weight);
     padding: 0 10%;
     overflow: hidden;
-}
-
-body::before {
-    content: ""; /* Create a pseudo-element for background image */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("images/header_asset.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 h1, h2, span, body {
@@ -112,14 +100,15 @@ header {
 .icon_row {
     display: flex;
     margin: 0 auto;
+    margin-left: -0.75rem;
+    margin-bottom: -0.5rem;
 }
 
 .icon_row_item {
-    margin-right: 1rem;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 1px;
+    padding: 0.75rem;
     padding-top: 2px;
     transition: transform 0.3s ease;
 }
@@ -133,37 +122,48 @@ header {
     color: var(--primary-color);
 }
 
-.logo {
-    width: 4.5rem;
-    height: auto;
-    opacity: 0;
-}
-
-.logo-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1.5rem;
-    bottom: var(--bottom-margin);
-    right: 2rem;
-    justify-content: center;
+.gradient-object {
     position: absolute;
-}
+    width: 200%; /* Large size to cover more area */
+    height: 200%;
+    filter: blur(300px);
+    animation: rotate 12s infinite linear; /* Rotation animation */
+    opacity: 0.5;
+    z-index: -1;
+  }
+  
+  .object-1 {
+    background: linear-gradient(135deg, #AEDDFF, #BBA3FF); /* First gradient */
+    animation-duration: 15s; /* Control speed independently */
+    animation-direction: alternate-reverse; /* Alternate direction for smoother effect */
+    transform: rotate(-45deg) translate(-50%, -50%);
+  }
+  
+  .object-2 {
+    background: linear-gradient(45deg, #FFAA97, #FF5F8F); /* Second gradient */
+    animation-duration: 20s; /* Different speed for variety */
+    mix-blend-mode: multiply; /* Blend effect to create interesting overlays */
+    right: 0;
+  }
+  
+  /* Rotation animation */
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg) translateX(0) translateY(0);
+    }
+    100% {
+      transform: rotate(360deg) translateX(0) translateY(0);
+    }
+  }
 
-.logo-fade-in {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-
-.logo-fade-in.visible {
-    opacity: 1;;
-}
 
 
 @media (max-width: 800px) {
     .logo-container {
         display: none;
+    }
+    .object-1, .object-2 {
+        top: 0;
     }
 }
 
@@ -187,6 +187,14 @@ header {
 
     footer p {
         font-size: 14px;
+    }
+
+    .icon-style {
+        font-size: 1.75rem;
+    }
+
+    .adjust {
+        margin-left: 0.2rem;
     }
 }
 }
