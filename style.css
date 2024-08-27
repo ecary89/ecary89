@@ -80,12 +80,12 @@ p {
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
     color: var(--primary-color);
     opacity: 0.9;
     text-align: left;
     padding-bottom: var(--bottom-margin);
-    position: fixed;
-    bottom: 0;
     width: 100%;
     margin: 0 auto;
 }
@@ -123,10 +123,10 @@ header {
 }
 
 .gradient-object {
-    position: absolute;
+    position: fixed;
     width: 200%; /* Large size to cover more area */
     height: 200%;
-    filter: blur(300px);
+    filter: blur(200px);
     animation: rotate 12s infinite linear; /* Rotation animation */
     opacity: 0.5;
     z-index: -1;
@@ -185,6 +185,11 @@ header {
 
 @media (max-width: 450px) {
 
+    .gradient-object {
+        width: 100%;
+        height: 100%;
+      }
+    
     footer p {
         font-size: 14px;
     }
