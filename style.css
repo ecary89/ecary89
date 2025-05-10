@@ -273,6 +273,7 @@ body {
 .shape-star {
   right: -4rem;
 }
+}
 
 @media (max-width: 799px) {
   .main-content {
