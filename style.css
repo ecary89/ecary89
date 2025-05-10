@@ -1,205 +1,325 @@
-/* global styles*/
-
 :root {
-    --primary-color: #19005E;
-    --secondary-color: #DACCFF;
-    --background-color: #fff; 
-    --link-color: #fff;
+  --primary-color: #0D4030;
+  --background-color: #F2EEE9;
+  --secondary-color: #BFAB93;
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
+  --font-weight-light: 300;
 
-    --bold-font-weight: 600;
-    --semi-bold-font-weight: 500;
-    --regular-font-weight: 400;
-    --light-font-weight: 100;
+/* Base font sizes */
+--h1-size-desktop: 4.5rem; /* Approx 72px */
+--text-size-desktop: 1.5rem; /* Approx 24px */
+--footer-text-desktop: 0.875rem; /* Approx 14px */
 
-    --h1: 70px;
-    --body-font: 24px;
-    --tiny-font: 16px;
+--h1-size-tablet: 3.5rem;
+--text-size-tablet: 1.25rem;
+--footer-text-tablet: 0.8rem;
 
-    --mobile-h1: 40px;
-    --mobile-body-font: 16px;
+--h1-size-mobile: 2.5rem;
+--text-size-mobile: 1rem;
+--footer-text-mobile: 0.75rem;
 
-    --bottom-margin: 2rem;
+/* Spacing */
+--content-padding-desktop: 4rem;
+--content-padding-tablet: 3rem;
+--content-padding-mobile: 1.5rem;
 
-    /*
-    --breakpoint-small: 576px;
-    --breakpoint-medium: 768px;
-    --breakpoint-large: 992px;
-    --breakpoint-xlarge: 1200px;
-    */
+
+--animation-duration: 0.5s;
+--animation-ease: ease-out;
+
+}
+
+/* General Styles */
+body {
+  font-family: 'Source Sans Pro', serif;
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  font-size: var(--text-size-desktop);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.3;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
 }
 
 .bold {
-    font-weight: var(--semi-bold-font-weight);
+  font-family: 'Lato', sans-serif;
+  font-weight: var(--font-weight-bold);
 }
 
-.light {
-    font-weight: var(--light-font-weight);
+.main-content {
+  position: absolute;
+  bottom: var(--content-padding-desktop);
+  left: var(--content-padding-desktop);
+  right: var(--content-padding-desktop);
+  z-index: 10;
 }
 
-body {
-    font-family: 'Bitter', sans-serif;
-    margin: 0;
-    font-size: var(--body-font);
-    font-weight: var(--regular-font-weight);
-    padding: 0 10%;
-    overflow: hidden;
+.main-content header h1,
+.main-content header p {
+  margin: 0;
+  color: var(--primary-color);
 }
 
-h1, h2, span, body {
-    color: var(--primary-color);
+.main-content header h1 {
+  font-family: 'Lato', sans-serif;
+  font-size: var(--h1-size-desktop);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.5;
 }
 
-h1 {
-    font-family: 'Lato', sans-serif;
-    margin-bottom: 0.25rem;
-    font-size: var(--h1);
-    font-weight: var(--semi-bold-font-weight);
-    letter-spacing: -0.05rem;
-    color: var(--primary-color);
+.main-content header p {
+  font-size: var(--text-size-desktop);
 }
 
-p {
-    font-size: var(--tiny-font);
+.main-content footer {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
-/* specific containers */
-
-.adjust {
-    margin-left: 0.3rem;
+.main-content footer .copyright {
+  font-size: var(--footer-text-desktop);
+  color: var(--secondary-color);
+  opacity: 0.7;
+  text-align: right;
 }
 
-.fade-in {
-    opacity: 0;
-    transform: translateY(5%);
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+.social-icons {
+  display: flex;
+  align-items: center;
 }
 
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
-    color: var(--primary-color);
-    opacity: 0.9;
-    text-align: left;
-    padding-bottom: var(--bottom-margin);
-    width: 100%;
-    margin: 0 auto;
-}
-
-header {
-    padding: 10rem 0;
-    margin: 0 auto;
-    position: relative;
-    z-index: 0;
-}
-
-.icon_row {
-    display: flex;
-    margin: 0 auto;
-    margin-left: -0.75rem;
-    margin-bottom: -0.5rem;
-}
-
-.icon_row_item {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.75rem;
-    padding-top: 2px;
-    transition: transform 0.3s ease;
-}
-
-.icon_row_item:hover {
-    transform: translateY(-5px);
+.social-icons a:not(:last-child) {
+  margin-right: 1.7rem;
 }
 
 .icon-style {
-    font-size: 1.5rem;
-    color: var(--primary-color);
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  transition: transform var(--animation-duration) var(--animation-ease);
 }
 
-.gradient-object {
-    position: fixed;
-    width: 200%; /* Large size to cover more area */
-    height: 200%;
-    filter: blur(200px);
-    animation: rotate 12s infinite linear; /* Rotation animation */
-    opacity: 0.5;
-    z-index: -1;
-  }
-  
-  .object-1 {
-    background: linear-gradient(135deg, #AEDDFF, #BBA3FF); /* First gradient */
-    animation-duration: 15s; /* Control speed independently */
-    animation-direction: alternate-reverse; /* Alternate direction for smoother effect */
-    transform: rotate(-45deg) translate(-50%, -50%);
-  }
-  
-  .object-2 {
-    background: linear-gradient(45deg, #FFAA97, #FF5F8F); /* Second gradient */
-    animation-duration: 20s; /* Different speed for variety */
-    mix-blend-mode: multiply; /* Blend effect to create interesting overlays */
-    right: 0;
-  }
-  
-  /* Rotation animation */
-  @keyframes rotate {
-    0% {
-      transform: rotate(0deg) translateX(0) translateY(0);
-    }
-    100% {
-      transform: rotate(360deg) translateX(0) translateY(0);
-    }
-  }
+.icon-style:hover {
+  color: #177356;
+}
+
+/* Shape Area */
+.shape-area {
+  position: absolute;
+  top: var(--content-padding-desktop);
+  right: var(--content-padding-desktop);
+  width: 48vw;
+  height: 50vh;
+  max-width: 600px;
+  max-height: 812px;
+  z-index: 5;
+}
+
+.geometric-shape {
+  position: absolute;
+  opacity: 0;
+  display: block; /* Helps with positioning and prevents extra space below inline images */
+  max-width: 300px; /* Example: Limit the maximum width of the shapes */
+  height: auto;
+}
+
+/* Shape Styles */
+.shape-radial,
+.shape-x,
+.shape-squiggle,
+.shape-triangle,
+.shape-star,
+.shape-dots {
+  animation: fadeIn var(--animation-duration) var(--animation-ease) forwards;
+}
+
+.shape-radial {
+  top: 0;
+  right: 100%;
+  height: auto;
+}
+.shape-dots {
+  top: 0;
+  right: 8rem;
+  height: auto;
+}
+.shape-triangle {
+  top: 7rem;
+  right: 0;
+}
+.shape-squiggle {
+  top: 14rem;
+  right: 18rem;
+  height: auto;
+}
+.shape-x {
+  top: 100%;
+  right: 28rem;
+}
+.shape-star {
+  top: 52%;
+  right: 2rem;
+}
 
 
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform:scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform:scale(1);
+  }
+}
 
-@media (max-width: 800px) {
-    .logo-container {
-        display: none;
+@keyframes rotateFadeIn {
+    from {
+        opacity: 0;
+        transform: rotate(-180deg); /* Start rotated */
     }
-    .object-1, .object-2 {
-        top: 0;
+    to {
+        opacity: 1;
+        transform: rotate(0deg); /* End at no rotation */
     }
 }
 
-@media (max-width: 699px) {
-    body {
-        font-size: var(--mobile-body-font);
-        padding: 0 2rem;
-    }
+@keyframes occasionalSpin {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(360deg); } /* Spin completes within the first 20% of the animation duration */
+    100% { transform: rotate(360deg); } /* Stay at the final rotation (visually 0deg) for the rest of the duration (the pause) */
+}
 
-    body::before {
-        background-image: url("images/mobile_header_asset.svg");
-    }
+@keyframes occasionalBounce {
+    0% { transform: translateY(0); } /* Start at original vertical position */
+    5% { transform: translateY(-10px); } /* Bounce up 10px */
+    10% { transform: translateY(0); } /* Return to original position */
+    100% { transform: translateY(0); } /* Stay at original position for the rest of the duration (the pause) */
+}
 
-    h1 {
-        font-size: var(--mobile-h1);
-    }
+/* --- Apply Animations to Shapes --- */
+
+.shape-radial {
+    animation: 
+        rotateFadeIn var(--animation-duration) var(--animation-ease) forwards;
+    animation-delay: 0.2s;
+}
+
+.shape-dots {
+    animation: 
+        rotateFadeIn var(--animation-duration) var(--animation-ease) forwards,
+        occasionalBounce 8s ease-in-out infinite 7s;
+    animation-delay: 0.7s;
+}
+
+.shape-x {
+    animation: 
+        rotateFadeIn var(--animation-duration) var(--animation-ease) forwards,
+        occasionalSpin 3s linear infinite 7s;
+    animation-delay: 0.4s;
+}
 
 
 
-@media (max-width: 450px) {
 
-    .gradient-object {
-        width: 100%;
-        height: 100%;
-      }
-    
-    footer p {
-        font-size: 14px;
-    }
+/* Responsive Styles */
+@media (max-width: 1279px) {
+  .main-content {
+    bottom: var(--content-padding-tablet);
+    left: var(--content-padding-tablet);
+    right: var(--content-padding-tablet);
+  }
 
-    .icon-style {
-        font-size: 1.75rem;
-    }
+  .main-content header h1 {
+    font-size: var(--h1-size-tablet);
+  }
 
-    .adjust {
-        margin-left: 0.2rem;
-    }
+  .main-content header p {
+    font-size: var(--text-size-tablet);
+  }
+
+  .main-content footer .copyright {
+    font-size: var(--footer-text-tablet);
+  }
+
+  .shape-area {
+    top: var(--content-padding-tablet);
+    right: var(--content-padding-tablet);
+    width: 48vw;
+    height: 50vh;
+  }
+
+.shape-dots {
+  right: 0rem;
+}
+.shape-triangle {
+  right: -6rem;
+}
+.shape-squiggle {
+  right: 14rem;
+}
+.shape-x {
+  right: 24rem;
+}
+.shape-star {
+  right: -4rem;
+}
+
+@media (max-width: 799px) {
+  .main-content {
+    bottom: var(--content-padding-mobile);
+    left: var(--content-padding-mobile);
+    right: var(--content-padding-mobile);
+  }
+
+  .main-content header h1 {
+    font-size: var(--h1-size-mobile);
+  }
+
+  .main-content header p {
+    font-size: var(--text-size-mobile);
+  }
+
+.main-content footer {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .main-content footer .copyright {
+    font-size: var(--footer-text-mobile);
+    text-align: left;
+    margin-top: 0.6rem;
+  }
+
+  .shape-area {
+    top: var(--content-padding-mobile);
+    right: var(--content-padding-mobile);
+    width: 40vw;
+    height: 30vh;
+    scale: 0.6;
+  }
+
+  .shape-dots {
+  right: -3.5rem;
+}
+.shape-squiggle {
+  right: 2rem;
+}
+.shape-x {
+  top: 26rem;
+  right: 12rem;
+}
+.shape-star {
+    top: 24rem;
+    right: -2rem;
 }
 }

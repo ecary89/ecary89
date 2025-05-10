@@ -1,0 +1,10 @@
+<svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="radial-shape_inner" data-figma-trr="r6u2.5-0f">
+<line x1="39.9844" y1="4.54645" x2="35.8115" y2="17.5504" stroke="#BFAB93" stroke-width="7" stroke-linecap="round"/>
+</g>
+<use xlink:href="#radial-shape_inner" transform="translate(47.2172 -12.6518) rotate(60)"/>
+<use xlink:href="#radial-shape_inner" transform="translate(81.7826 21.9135) rotate(120)"/>
+<use xlink:href="#radial-shape_inner" transform="translate(69.1308 69.1308) rotate(-180)"/>
+<use xlink:href="#radial-shape_inner" transform="translate(21.9136 81.7826) rotate(-120)"/>
+<use xlink:href="#radial-shape_inner" transform="translate(-12.6518 47.2172) rotate(-60)"/>
+</svg>
