@@ -1,3 +1,9 @@
-<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1.6369 0.825222C2.94708 -0.358392 4.96883 -0.256329 6.15253 1.05374L11.2795 6.72952L16.6887 1.32132C17.9372 0.0727576 19.9616 0.0727655 21.2101 1.32132C22.4587 2.56988 22.4587 4.59424 21.2101 5.8428L15.5715 11.4805L20.9172 17.3975C22.1007 18.7077 21.9979 20.7295 20.6877 21.9131C19.3774 23.0967 17.3557 22.9938 16.1721 21.6836L11.0441 16.0078L5.63592 21.417C4.38733 22.6652 2.36287 22.6654 1.11444 21.417C-0.133978 20.1686 -0.133721 18.1441 1.11444 16.8955L6.75214 11.2569L1.40741 5.34085C0.223773 4.03064 0.326767 2.00891 1.6369 0.825222Z" fill="#1C4F82"/>
+<svg width="68" height="32" viewBox="0 0 68 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Comet: glowing head + streaming tail -->
+  <ellipse cx="54" cy="16" rx="13" ry="12" fill="#00D4FF"/>
+  <path d="M41 10 Q22 7 2 2"   stroke="#00D4FF" stroke-width="4"   stroke-linecap="round" opacity="0.65"/>
+  <path d="M41 16 Q20 16 0 16"  stroke="#00D4FF" stroke-width="5.5" stroke-linecap="round" opacity="0.45"/>
+  <path d="M41 22 Q22 25 2 30"  stroke="#00D4FF" stroke-width="4"   stroke-linecap="round" opacity="0.65"/>
+  <path d="M41 12 Q26 8  8 2"  stroke="#00D4FF" stroke-width="2"   stroke-linecap="round" opacity="0.3"/>
+  <path d="M41 20 Q26 24 8 30" stroke="#00D4FF" stroke-width="2"   stroke-linecap="round" opacity="0.3"/>
 </svg>

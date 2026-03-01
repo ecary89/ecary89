@@ -1,3 +1,11 @@
 <svg width="246" height="155" viewBox="0 0 246 155" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M93.545 151.341L1.84167 9.96294C-1.06724 5.47832 2.89809 -0.284584 8.12611 0.829618L241.207 50.5042C246.435 51.6184 247.706 58.4973 243.222 61.4062L101.844 153.11C99.0638 154.913 95.3483 154.121 93.545 151.341Z" fill="#DE3BCB"/>
+  <!-- Faceted crystal gem -->
+  <!-- Top highlight facet -->
+  <path d="M123 4 L70 50 L123 36 L176 50 Z" fill="#F07ADA"/>
+  <!-- Left body facet -->
+  <path d="M70 50 L6 110 L123 152 L123 36 Z" fill="#DE3BCB"/>
+  <!-- Right body facet -->
+  <path d="M176 50 L240 110 L123 152 L123 36 Z" fill="#C828B8"/>
+  <!-- Bottom base -->
+  <path d="M6 110 L123 152 L240 110 Z" fill="#A81298"/>
 </svg>

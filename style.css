@@ -1,7 +1,7 @@
 :root {
-  --primary-color: #0D2E4F;
-  --background-color: #F2EEE9;
-  --secondary-color: #AA9E8E;
+  --primary-color: #EDE0FF;
+  --background-color: #07000D;
+  --secondary-color: #9D84C0;
   --font-weight-bold: 700;
   --font-weight-regular: 400;
   --font-weight-light: 300;
@@ -27,7 +27,6 @@
 
 --animation-duration: 0.5s;
 --animation-ease: ease-in-out;
---float-animation: float 3s ease-in-out infinite;
 
 }
 
@@ -48,7 +47,7 @@ body {
 }
 
 .bold {
-  font-family: 'Lato', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-weight: var(--font-weight-bold);
 }
 
@@ -67,10 +66,11 @@ body {
 }
 
 .main-content header h1 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
   font-size: var(--h1-size-desktop);
   font-weight: var(--font-weight-bold);
-  line-height: 1.5;
+  line-height: 1.1;
+  letter-spacing: 0.04em;
 }
 
 .main-content header p {
@@ -109,187 +109,113 @@ body {
 }
 
 .icon-style:hover {
-  color: #1c4f82;
+  color: #FF3DD6;
 }
 
-/* Shape Area */
-.shape-area {
+/* Glow Area */
+.glow-area {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.glow-blob {
   position: absolute;
-  top: var(--content-padding-desktop);
-  right: var(--content-padding-desktop);
+  border-radius: 50%;
+}
+
+.glow-magenta {
+  width: 65vw;
+  height: 65vw;
+  top: -25%;
+  right: -10%;
+  background: radial-gradient(circle, rgba(255, 61, 214, 0.50) 0%, transparent 65%);
+  filter: blur(70px);
+  animation: driftMagenta 22s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.glow-cyan {
+  width: 35vw;
+  height: 35vw;
+  top: 5%;
+  left: -8%;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.38) 0%, transparent 65%);
+  filter: blur(60px);
+  animation: driftCyan 18s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+.glow-purple {
+  width: 80vw;
+  height: 80vw;
+  top: 20%;
+  right: -30%;
+  background: radial-gradient(circle, rgba(107, 63, 212, 0.32) 0%, transparent 65%);
+  filter: blur(90px);
+  animation: driftPurple 28s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.glow-gold {
+  width: 42vw;
+  height: 42vw;
+  bottom: -5%;
+  right: 20%;
+  background: radial-gradient(circle, rgba(255, 208, 96, 0.35) 0%, transparent 65%);
+  filter: blur(65px);
+  animation: driftGold 20s ease-in-out infinite;
+  animation-delay: 6s;
+}
+
+.glow-blue {
   width: 48vw;
-  height: 50vh;
-  max-width: 600px;
-  max-height: 812px;
-  z-index: 5;
-}
-
-.geometric-shape {
-  position: absolute;
-  opacity: 0;
-  display: block; /* Helps with positioning and prevents extra space below inline images */
-  max-width: 300px; /* Example: Limit the maximum width of the shapes */
-  height: auto;
-}
-
-/* Shape Styles */
-.shape-radial,
-.shape-x,
-.shape-squiggle,
-.shape-triangle,
-.shape-star,
-.shape-dots {
-  animation: fadeIn var(--animation-duration) var(--animation-ease) forwards;
-}
-
-.shape-radial {
-  top: 0;
-  right: 100%;
-  height: auto;
-}
-.shape-dots {
-  top: 0;
-  right: 8rem;
-  height: auto;
-}
-.shape-triangle {
-  top: 7rem;
-  right: 0;
-}
-.shape-squiggle {
-  top: 14rem;
-  right: 18rem;
-  height: auto;
-}
-.shape-x {
-  top: 100%;
-  right: 28rem;
-}
-.shape-star {
-  top: 52%;
-  right: 2rem;
+  height: 48vw;
+  bottom: 20%;
+  left: -12%;
+  background: radial-gradient(circle, rgba(62, 151, 242, 0.28) 0%, transparent 65%);
+  filter: blur(80px);
+  animation: driftBlue 25s ease-in-out infinite;
+  animation-delay: 9s;
 }
 
 
 /* Keyframe Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;;
-  }
-  to {
-    opacity: 1;
-  }
+@keyframes driftMagenta {
+  0%   { transform: translate(0, 0) scale(1);       opacity: 0.85; }
+  30%  { transform: translate(5%, 6%) scale(1.06);  opacity: 1;    }
+  60%  { transform: translate(8%, -3%) scale(1.04); opacity: 0.70; }
+  100% { transform: translate(0, 0) scale(1);       opacity: 0.85; }
 }
 
-@keyframes fadeInTilt {
-  from {
-    opacity: 0;
-    transform:rotate(30deg) translateX(20%);
-  }
-  to {
-    opacity: 1;
-    transform:rotate(0deg)translateX(0);
-  }
+@keyframes driftCyan {
+  0%   { transform: translate(0, 0) scale(1);        opacity: 0.85; }
+  40%  { transform: translate(-6%, 8%) scale(1.10);  opacity: 0.65; }
+  70%  { transform: translate(4%, 5%) scale(1.05);   opacity: 1;    }
+  100% { transform: translate(0, 0) scale(1);        opacity: 0.85; }
 }
 
-@keyframes fadeInSlideRight {
-  from {
-    opacity: 0;
-    transform: translateX(-10%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+@keyframes driftPurple {
+  0%   { transform: translate(0, 0) scale(1);         opacity: 0.80; }
+  35%  { transform: translate(-3%, -5%) scale(1.07);  opacity: 1;    }
+  65%  { transform: translate(5%, 3%) scale(1.04);    opacity: 0.70; }
+  100% { transform: translate(0, 0) scale(1);         opacity: 0.80; }
 }
 
-@keyframes rotateFadeIn {
-    from {
-        opacity: 0;
-        transform: rotate(-180deg); /* Start rotated */
-    }
-    to {
-        opacity: 1;
-        transform: rotate(0deg); /* End at no rotation */
-    }
+@keyframes driftGold {
+  0%   { transform: translate(0, 0) scale(1);          opacity: 0.90; }
+  45%  { transform: translate(-8%, -6%) scale(1.08);   opacity: 0.65; }
+  80%  { transform: translate(3%, -4%) scale(1.05);    opacity: 1;    }
+  100% { transform: translate(0, 0) scale(1);          opacity: 0.90; }
 }
 
-
-@keyframes occasionalSpin {
-    0% { transform: rotate(0deg); }
-    20% { transform: rotate(360deg); } /* Spin completes within the first 20% of the animation duration */
-    100% { transform: rotate(360deg); } /* Stay at the final rotation (visually 0deg) for the rest of the duration (the pause) */
-}
-
-@keyframes occasionalShrink {
-    0% { transform: scale(1); } 
-    5% { transform: scale(0.75); } 
-    10% { transform: scale(1.1); }
-    12% { transform: scale(1); }
-    100% { transform: scale(1); } /* Stay at original position for the rest of the duration (the pause) */
-}
-
-@keyframes occasionalSpinScale {
-    0% { transform: scale(1) rotate(0deg); }
-    10% { transform: scale(0.75) rotate(180deg); } /* Spin completes within the first 20% of the animation duration */
-    20% { transform: scale(1) rotate(0deg); }
-    100% { transform: scale(1) rotate(0deg); } /* Stay at the final rotation (visually 0deg) for the rest of the duration (the pause) */
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0px); /* Start at original position */
-  }
-  50% {
-    transform: translateY(-5px); /* Move up by 10 pixels */
-  }
-  100% {
-    transform: translateY(0px); /* Return to original position */
-  }
-}
-
-/* --- Apply Animations to Shapes --- */
-
-.shape-radial {
-    animation: 
-        rotateFadeIn var(--animation-duration) var(--animation-ease) forwards,
-        occasionalSpinScale 5s ease-in-out infinite 8s;
-    animation-delay: 0.2s;
-}
-
-.shape-dots {
-    animation: 
-        rotateFadeIn var(--animation-duration) var(--animation-ease) forwards,
-        occasionalShrink 8s ease-in-out infinite 10s;
-    animation-delay: 0.7s;
-}
-
-.shape-x {
-    animation: 
-        rotateFadeIn var(--animation-duration) var(--animation-ease) forwards,
-        occasionalSpin 3s ease-in-out infinite 6s;
-    animation-delay: 0.4s;
-}
-
-.shape-triangle {
-    animation: 
-        fadeInTilt var(--animation-duration) var(--animation-ease) forwards,
-        var(--float-animation);
-    animation-delay: 0s, 0.9s;
-}
-
-.shape-squiggle {
-  animation: 
-    fadeInSlideRight var(--animation-duration) var(--animation-ease) forwards, /* Fade-in and slide */
-    var(--float-animation); /* Floating effect */
-  animation-delay: 0s, 0.6s; /* Delay for each animation */
-}
-
-.shape-star {
-    animation: 
-        fadeIn var(--animation-duration) var(--animation-ease) forwards,
-        var(--float-animation);
-    animation-delay: 0.2s, 1.1s;
+@keyframes driftBlue {
+  0%   { transform: translate(0, 0) scale(1);        opacity: 0.80; }
+  25%  { transform: translate(6%, -7%) scale(1.06);  opacity: 1;    }
+  60%  { transform: translate(-4%, 5%) scale(1.09);  opacity: 0.65; }
+  100% { transform: translate(0, 0) scale(1);        opacity: 0.80; }
 }
 
 
@@ -313,28 +239,6 @@ body {
     font-size: var(--footer-text-tablet);
   }
 
-  .shape-area {
-    top: var(--content-padding-tablet);
-    right: var(--content-padding-tablet);
-    width: 48vw;
-    height: 50vh;
-  }
-
-.shape-dots {
-  right: 0rem;
-}
-.shape-triangle {
-  right: -6rem;
-}
-.shape-squiggle {
-  right: 14rem;
-}
-.shape-x {
-  right: 24rem;
-}
-.shape-star {
-  right: -4rem;
-}
 }
 
 @media (max-width: 799px) {
@@ -363,26 +267,4 @@ body {
     margin-top: 0.6rem;
   }
 
-  .shape-area {
-    top: var(--content-padding-mobile);
-    right: var(--content-padding-mobile);
-    width: 40vw;
-    height: 30vh;
-    scale: 0.6;
-  }
-
-  .shape-dots {
-  right: -3.5rem;
-}
-.shape-squiggle {
-  right: 9rem;
-}
-.shape-x {
-  top: 26rem;
-  right: 12rem;
-}
-.shape-star {
-    top: 24rem;
-    right: -2rem;
-}
 }
