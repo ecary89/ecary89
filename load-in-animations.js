@@ -1,19 +1,22 @@
-// JavaScript for fade-in animation for text elements
+// JavaScript for page load animations
 document.addEventListener('DOMContentLoaded', function() {
-// Text fade-in
-const textElements = Array.from(document.querySelectorAll('.fade-in'));
-textElements.sort((a, b) => parseInt(a.getAttribute('data-order'), 10) - parseInt(b.getAttribute('data-order'), 10));
-let textDelay = 0.3; // Initial delay for the first text element
-textElements.forEach((element, index) => {
-const currentElementDelay = textDelay + index * 0.4; // Stagger subsequent text elements
-element.style.transitionDelay = `${currentElementDelay}s`;
-setTimeout(() => {
-element.classList.add('visible');
-}, currentElementDelay * 1000);
-});
 
-// Set current year in footer
-document.getElementById('current-year').textContent = new Date().getFullYear();
+  // Fade the glow area in from dark — atmosphere builds as the name lands
+  const glowArea = document.querySelector('.glow-area');
+  if (glowArea) {
+    setTimeout(() => glowArea.classList.add('visible'), 150);
+  }
+
+  // Fade in role and footer after the name animation has settled (~1.2s)
+  const textElements = Array.from(document.querySelectorAll('.fade-in'));
+  textElements.sort((a, b) => parseInt(a.getAttribute('data-order'), 10) - parseInt(b.getAttribute('data-order'), 10));
+  textElements.forEach((element, index) => {
+    const delay = 950 + index * 220;
+    setTimeout(() => element.classList.add('visible'), delay);
+  });
+
+  // Set current year in footer
+  document.getElementById('current-year').textContent = new Date().getFullYear();
 });
 
 // Function to add or remove the <br> tag based on screen width
