@@ -66,31 +66,60 @@ body {
 }
 
 .main-content header h1 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: var(--h1-size-desktop);
-  font-weight: var(--font-weight-bold);
-  line-height: 1.1;
-  letter-spacing: 0.04em;
+  line-height: 1;
 }
 
-.main-content header p {
-  font-size: var(--text-size-desktop);
+.name-first {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 700;
+  font-size: clamp(3rem, min(36vw, 28vh), 40rem);
+  letter-spacing: 0.02em;
+  color: var(--primary-color);
+  line-height: 0.88;
+  display: block;
+  text-align: left;
+}
+
+.name-last {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 700;
+  font-size: clamp(3rem, min(45vw, 36vh), 50rem);
+  letter-spacing: 0.02em;
+  color: var(--primary-color);
+  line-height: 0.88;
+  display: block;
+  text-align: right;
 }
 
 .main-content footer {
-  margin-top: 3rem;
+  margin-top: 0;
+  border-top: 1px solid rgba(237, 224, 255, 0.18);
+  padding-top: clamp(0.7rem, 1.2vw, 1rem);
+  width: 100%;
+  margin-bottom: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  margin-bottom: 1rem;
+}
+
+.role {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  font-size: clamp(0.6rem, 0.9vw, 0.75rem);
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(237, 224, 255, 0.65);
+  margin: 0;
+  margin-top: clamp(0.5rem, 1vw, 0.75rem);
 }
 
 .main-content footer .copyright {
-  font-size: var(--footer-text-desktop);
+  font-size: clamp(0.55rem, 0.8vw, 0.68rem);
   color: var(--secondary-color);
-  opacity: 0.7;
+  opacity: 0.35;
   text-align: right;
+  margin: 0;
+  letter-spacing: 0.05em;
 }
 
 .social-icons {
@@ -227,14 +256,6 @@ body {
     right: var(--content-padding-tablet);
   }
 
-  .main-content header h1 {
-    font-size: var(--h1-size-tablet);
-  }
-
-  .main-content header p {
-    font-size: var(--text-size-tablet);
-  }
-
   .main-content footer .copyright {
     font-size: var(--footer-text-tablet);
   }
@@ -248,23 +269,26 @@ body {
     right: var(--content-padding-mobile);
   }
 
-  .main-content header h1 {
-    font-size: var(--h1-size-mobile);
+  /* Scale names to fill ~80–90% of available width — dramatic but fully readable */
+  .name-first {
+    font-size: clamp(2.5rem, 37vw, 10rem);
   }
 
-  .main-content header p {
-    font-size: var(--text-size-mobile);
+  .name-last {
+    font-size: clamp(3rem, 43vw, 11rem);
+    text-align: left;
   }
 
-.main-content footer {
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the left */
+  /* Footer stacks vertically so copyright isn't cramped */
+  .main-content footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
   }
 
   .main-content footer .copyright {
     font-size: var(--footer-text-mobile);
     text-align: left;
-    margin-top: 0.6rem;
   }
 
 }
