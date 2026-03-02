@@ -1,9 +1,0 @@
-<svg width="68" height="32" viewBox="0 0 68 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Comet: glowing head + streaming tail -->
-  <ellipse cx="54" cy="16" rx="13" ry="12" fill="#00D4FF"/>
-  <path d="M41 10 Q22 7 2 2"   stroke="#00D4FF" stroke-width="4"   stroke-linecap="round" opacity="0.65"/>
-  <path d="M41 16 Q20 16 0 16"  stroke="#00D4FF" stroke-width="5.5" stroke-linecap="round" opacity="0.45"/>
-  <path d="M41 22 Q22 25 2 30"  stroke="#00D4FF" stroke-width="4"   stroke-linecap="round" opacity="0.65"/>
-  <path d="M41 12 Q26 8  8 2"  stroke="#00D4FF" stroke-width="2"   stroke-linecap="round" opacity="0.3"/>
-  <path d="M41 20 Q26 24 8 30" stroke="#00D4FF" stroke-width="2"   stroke-linecap="round" opacity="0.3"/>
-</svg>

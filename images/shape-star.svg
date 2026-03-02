@@ -1,8 +1,0 @@
-<svg width="175" height="199" viewBox="0 0 175 199" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- 4-point diamond star with concave bezier sides -->
-  <path d="M87.5 0
-    C87.5 0, 102 74, 175 99.5
-    C102 125, 87.5 199, 87.5 199
-    C87.5 199, 73 125, 0 99.5
-    C73 74, 87.5 0, 87.5 0 Z" fill="#3E97F2"/>
-</svg>
