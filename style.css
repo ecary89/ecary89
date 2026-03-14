@@ -117,6 +117,17 @@ body {
   margin-top: clamp(0.5rem, 1vw, 0.75rem);
 }
 
+.blurb {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: var(--font-weight-light);
+  font-size: clamp(0.75rem, 1.1vw, 0.95rem);
+  color: rgba(237, 224, 255, 0.55);
+  margin: 0;
+  margin-top: clamp(0.6rem, 1vw, 0.85rem);
+  max-width: 52ch;
+  line-height: 1.55;
+}
+
 .main-content footer .copyright {
   font-size: clamp(0.55rem, 0.8vw, 0.68rem);
   color: var(--secondary-color);
