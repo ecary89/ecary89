@@ -56,3 +56,17 @@ window.addEventListener('load', updateCopyrightLineBreak);
 
 // Run the function on window resize
 window.addEventListener('resize', updateCopyrightLineBreak);
+
+// ── Align scene dots with ERIKA text center ───────────────────────
+function alignSceneDots() {
+  var erikaEl = document.querySelector('.scene[data-idx="0"] .scene-a');
+  var dotsEl  = document.querySelector('.scene-dots');
+  if (!erikaEl || !dotsEl) return;
+  var erikaRect  = erikaEl.getBoundingClientRect();
+  var erikaCenterY = erikaRect.top + erikaRect.height / 2;
+  dotsEl.style.top       = erikaCenterY + 'px';
+  dotsEl.style.transform = 'translateY(-50%)';
+}
+
+document.fonts.ready.then(alignSceneDots);
+window.addEventListener('resize', alignSceneDots);
