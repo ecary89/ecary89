@@ -3,9 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Erika Cary</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Erika Cary — Lead Product Designer</title>
+    <meta name="description" content="Erika Cary is a lead product designer who works upstream of the pixels — framing problems, aligning teams, and deciding what not to build.">
+
+    <!-- Social card -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Erika Cary — Lead Product Designer">
+    <meta property="og:description" content="I work upstream of the pixels: framing problems, aligning teams, and deciding what not to build.">
+    <meta property="og:url" content="https://erikacary.com">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Erika Cary — Lead Product Designer">
+    <meta name="twitter:description" content="I work upstream of the pixels: framing problems, aligning teams, and deciding what not to build.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
     <!-- Google Analytics 4 -->
@@ -19,98 +31,66 @@
 </head>
 <body>
 
-<div class="glow-area" aria-hidden="true">
-    <div class="glow-blob glow-magenta"></div>
-    <div class="glow-blob glow-cyan"></div>
-    <div class="glow-blob glow-purple"></div>
-    <div class="glow-blob glow-gold"></div>
-    <div class="glow-blob glow-blue"></div>
+<!-- Fade-in compact header bar -->
+<div class="header-bar" id="header-bar" aria-hidden="true">
+    <div class="header-bar-inner">
+        <span class="header-bar-name">Erika Cary</span>
+        <span class="header-bar-role">Lead Product Designer</span>
+    </div>
 </div>
 
-<!-- Full-screen typographic scenes, revealed on scroll -->
-<div class="scene-container" role="region" aria-label="Introduction">
-
-    <div class="scene active" data-idx="0" style="--fsa: min(36vw, 28vh); --fsb: min(45vw, 36vh)">
-        <span class="scene-a">ERIKA</span>
-        <span class="scene-b">CARY</span>
+<div class="page">
+    <div class="nav-row">
+        <nav class="nav">
+            <a href="mailto:erika.mi.cary@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/ecary/" target="_blank" rel="noopener">LinkedIn</a>
+        </nav>
     </div>
 
-    <div class="scene" data-idx="1" style="--fsa: 9.5vw; --fsb: 14vw">
-        <span class="scene-a">LEAD PRODUCT</span>
-        <span class="scene-b">DESIGNER</span>
-        <span class="scene-caption">at Pinterest</span>
-    </div>
+    <div class="hero-spacer"></div>
 
-    <div class="scene" data-idx="2" style="--fsa: 11vw; --fsb: 9vw">
-        <span class="scene-a">THINKS LIKE</span>
-        <span class="scene-b">A STRATEGIST.</span>
-    </div>
-
-    <div class="scene" data-idx="3" style="--fsa: 10vw; --fsb: 9vw">
-        <span class="scene-a">WORKS LIKE A</span>
-        <span class="scene-b">COLLABORATOR.</span>
-    </div>
-
-    <div class="scene" data-idx="4" style="--fsa: 12vw; --fsb: 12vw">
-        <span class="scene-a">SHIPS LIKE</span>
-        <span class="scene-b">A BUILDER.</span>
-    </div>
-
-    <div class="scene scene--contact" data-idx="5" style="--fsa: 24vw; --fsb: 11vw">
-        <div class="contact-lockup">
-            <span class="scene-a">WORK</span>
-            <span class="scene-b">WITH ME.</span>
-            <div class="contact-links">
-                <a href="mailto:erika.mi.cary@gmail.com" class="contact-btn">
-                    <i class="fa-solid fa-envelope"></i>Email
-                </a>
-                <a href="https://www.linkedin.com/in/ecary/" target="_blank" class="contact-btn">
-                    <i class="fa-brands fa-linkedin-in"></i>LinkedIn
-                </a>
-            </div>
+    <div class="hero-wrap">
+        <div class="hero-inner">
+            <h1 class="hero-name" id="hero-name" aria-label="Erika Cary"></h1>
+            <div class="hero-role">Lead Product Designer</div>
         </div>
     </div>
 
+    <main class="content">
+        <div class="positioning">
+            <p>My sharpest tool isn't a design file. It's the question <em>"what are we actually trying to do?"</em> I work upstream of the pixels: framing problems, aligning teams, and deciding what not to build.</p>
+        </div>
+
+        <div class="claims">
+            <div class="claim">
+                <span class="claim-title">Thinks like a strategist</span>
+                <span class="claim-evidence">Starts with the problem, not the artifact.</span>
+            </div>
+            <div class="claim">
+                <span class="claim-title">Works like a collaborator</span>
+                <span class="claim-evidence">The best ideas are the ones that survive other people.</span>
+            </div>
+            <div class="claim">
+                <span class="claim-title">Ships like a builder</span>
+                <span class="claim-evidence">Done is a design decision too.</span>
+            </div>
+        </div>
+
+        <footer class="site-footer">
+            <div class="footer-lockup">
+                <span class="footer-headline">Wrestling with a fuzzy problem?<br>I'd love to hear about it.</span>
+                <div class="footer-buttons">
+                    <a href="mailto:erika.mi.cary@gmail.com" class="btn btn-primary">Email</a>
+                    <a href="https://www.linkedin.com/in/ecary/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+                </div>
+            </div>
+            <span class="footer-copy">&copy; <span id="current-year"></span> Erika Cary</span>
+        </footer>
+    </main>
 </div>
 
-<!-- Persistent name — fades in once user scrolls past scene 0 -->
-<div class="scene-nameplate" aria-hidden="true">
-    <span class="nameplate-line" data-line="0">Erika Cary</span>
-    <span class="nameplate-line" data-line="1">Lead Product Designer at Pinterest</span>
-    <span class="nameplate-line" data-line="2">Thinks like a strategist.</span>
-    <span class="nameplate-line" data-line="3">Works like a collaborator.</span>
-    <span class="nameplate-line" data-line="4">Ships like a builder.</span>
-</div>
-
-<!-- Scene navigation dots -->
-<nav class="scene-dots" aria-label="Scene navigation">
-    <button class="dot active" data-scene="0" aria-label="Erika Cary"></button>
-    <button class="dot" data-scene="1" aria-label="Lead Product Designer"></button>
-    <button class="dot" data-scene="2" aria-label="Strategist"></button>
-    <button class="dot" data-scene="3" aria-label="Collaborator"></button>
-    <button class="dot" data-scene="4" aria-label="Builder"></button>
-    <button class="dot" data-scene="5" aria-label="Work with me"></button>
-</nav>
-
-<!-- Footer: always visible above the canvas -->
-<footer class="site-footer fade-in" data-order="1">
-    <div class="social-icons">
-        <a href="mailto:erika.mi.cary@gmail.com" target="_blank" aria-label="Email Erika Cary">
-            <i class="fa-solid fa-envelope icon-style"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/ecary/" target="_blank" aria-label="Erika Cary's LinkedIn Profile">
-            <i class="fa-brands fa-linkedin-in icon-style"></i>
-        </a>
-    </div>
-    <p class="copyright" id="copyright-text">&copy; <span id="current-year"></span> Erika Cary Portfolio. All rights reserved.</p>
-</footer>
-
-<canvas id="scratch-canvas" aria-hidden="true"></canvas>
-
-<script src="load-in-animations.js"></script>
 <script src="analytics.js"></script>
-<script src="scratch.js"></script>
-<script src="scene-reveal.js"></script>
+<script src="site.js"></script>
 
 </body>
 </html>
